@@ -20,9 +20,10 @@ const [selectedRepo, setSelectedRepo] = useState(null);
 
     try {
       setLoading(true);
-     const response = await fetch(
-  `http://localhost:5000/api/github/${username}`
-   );
+      console.log(import.meta.env.VITE_API_URL);
+    const response = await fetch(
+    `${import.meta.env.VITE_API_URL}/api/github/${username}`
+);
 
       const data = await response.json();
     if (data.message === "Not Found") {
@@ -47,7 +48,7 @@ localStorage.setItem(
   JSON.stringify(updatedSearches)
 );
       const repoResponse = await fetch(
-  `http://localhost:5000/api/github/${username}/repos`
+    `${import.meta.env.VITE_API_URL}/api/github/${username}/repos`
 );
 const repoData = await repoResponse.json();
 
