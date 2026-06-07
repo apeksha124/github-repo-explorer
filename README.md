@@ -1,129 +1,127 @@
-# GitHub Repo Explorer
+# 🚀 GitHub Repo Explorer
 
-A full-stack web application that allows users to search GitHub profiles and explore repositories using the GitHub API.
+## 📌 Project Title & Brief Description
 
-## Features
+The GitHub Repo Explorer is a full-stack web application that allows users to search GitHub profiles and view their public repositories. Users can explore profile information, repository details, and sort repositories based on different criteria. The project demonstrates frontend-backend integration, REST API consumption, caching, and deployment of a full-stack application.
 
-* Search GitHub users by username
-* Display profile information:
+---
 
-  * Avatar
-  * Name
-  * Bio
-  * Followers
-  * Following
-  * Public Repository Count
-* View repositories of a user
-* Sort repositories by:
+## 🌐 Live Demo Links
 
-  * Stars
-  * Name
-  * Last Updated
-* View additional repository details:
+* **Frontend (Deployed):** https://github-repo-explorer-xl9q.vercel.app/
+* **Backend API (Deployed):** https://github-repo-explorer-pfx4.onrender.com
 
-  * Fork Count
-  * Open Issues
-  * Default Branch
-* Recent Search History
-* Loading Indicators
-* Error Handling
-* Backend Response Caching (60 seconds)
+---
 
-## Tech Stack
+## ⚙️ Tech Stack
 
-### Frontend
+### Frontend:
 
-* React
-* Vite
-* CSS
+* React (Vite): Used for building a fast and responsive user interface
+* CSS: Used for styling and layout
 
-### Backend
+### Backend:
 
-* Node.js
-* Express.js
-* CORS
+* Node.js: JavaScript runtime for server-side development
+* Express.js: Framework for building RESTful APIs
+* CORS: To allow cross-origin requests between frontend and backend
 
-### API
+### API:
 
-* GitHub REST API
+* GitHub REST API: Used to fetch user and repository data
 
-## Project Structure
+---
 
-github-repo-explorer/
+## 🚀 How to Run Locally
 
-├── client/
+### Prerequisites:
 
-│   ├── src/
+* Node.js installed on your system
 
-│   │   ├── App.jsx
+### Step 1: Clone the Repository
 
-│   │   ├── App.css
+git clone https://github-repo-explorer-pfx4.onrender.com
+cd github-repo-explorer
 
-│   │   └── main.jsx
 
-│   └── package.json
+### Step 2: Run the Backend Server
 
-│
-
-├── server/
-
-│   ├── server.js
-
-│   └── package.json
-
-│
-
-└── README.md
-
-## Installation
-
-### Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
-### Frontend Setup
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-### Backend Setup
-
-```bash
 cd server
 npm install
 node server.js
-```
 
-## API Endpoints
+* Backend runs on: `http://localhost:5000`
 
-### Get User Profile
+### Step 3: Run the Frontend
 
-```http
-GET /api/github/:username
-```
+cd client
+npm install
+npm run dev
 
-### Get User Repositories
+* Frontend runs on: `http://localhost:5174`
 
-```http
-GET /api/github/:username/repos
-```
+---
 
-## Caching
+## 📡 API Documentation
 
-The backend caches GitHub API responses for 60 seconds to reduce unnecessary requests and improve performance.
+### Base URL:
 
-## Future Improvements
 
-* Pagination for repositories
-* Dark Mode
-* Repository Language Statistics
-* Improved Search Experience
+/api/github
 
-## Author
 
-Developed as part of a Full Stack Developer evaluation project.
+---
+
+### 👤 Get User Profile
+
+* **Method:** GET
+* **Endpoint:** `/:username`
+
+**Example:**
+
+http
+/api/github/octocat
+
+---
+
+### 📂 Get User Repositories
+
+* **Method:** GET
+* **Endpoint:** `/:username/repos`
+
+**Example:**
+
+http
+/api/github/octocat/repos
+
+
+---
+
+## 📁 Project Structure
+
+github-repo-explorer/
+│
+├── client/                # Frontend (React + Vite)
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── server/                # Backend (Node + Express)
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+
+---
+
+## 🔮 Next Steps
+
+* Add repository pagination
+* Add dark mode
+* Add repository filtering
+* Add language statistics
+* Improve UI responsiveness
+* Add search suggestions
+* Add GitHub contribution statistics
+
+---
