@@ -40,25 +40,30 @@ The GitHub Repo Explorer is a full-stack web application that allows users to se
 
 ### Step 1: Clone the Repository
 
-git clone https://github-repo-explorer-pfx4.onrender.com
+```bash
+git clone https://github.com/apeksha124/github-repo-explorer
 cd github-repo-explorer
-
+```
 
 ### Step 2: Run the Backend Server
 
+```bash
 cd server
 npm install
 node server.js
+```
 
 * Backend runs on: `http://localhost:5000`
 
 ### Step 3: Run the Frontend
 
+```bash
 cd client
 npm install
 npm run dev
+```
 
-* Frontend runs on: `http://localhost:5174`
+* Frontend runs on: `http://localhost:5173`
 
 ---
 
@@ -66,9 +71,9 @@ npm run dev
 
 ### Base URL:
 
-
+```
 /api/github
-
+```
 
 ---
 
@@ -79,8 +84,9 @@ npm run dev
 
 **Example:**
 
-http
+```http
 /api/github/octocat
+```
 
 ---
 
@@ -91,14 +97,15 @@ http
 
 **Example:**
 
-http
+```http
 /api/github/octocat/repos
-
+```
 
 ---
 
 ## 📁 Project Structure
 
+```
 github-repo-explorer/
 │
 ├── client/                # Frontend (React + Vite)
@@ -111,6 +118,7 @@ github-repo-explorer/
 │   └── package.json
 │
 └── README.md
+```
 
 ---
 
